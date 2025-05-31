@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #F5F5F5;
+    --primary-color: #EB5757;
+    --white-color: #FFFFFF;
+    --text-color: #333333;
+    --primary-color-dark: #C03939;
+}
+
+html {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 129.6rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    line-height: 120%;
+}
+
+p {
+    color: var(--text-color);
+    line-height: 130%;
+    font-size: 2.2rem;
+    opacity: .85;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+button.primary, button.secondary {
+    padding: 0.9rem 1.6rem;
+    border-radius: 1.2rem;
+    font-size: 2.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+button.primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+button.secondary {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+button.secondary:hover {
+    border-color: var(--primary-color-dark);
+    color: var(--primary-color-dark);
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 5.2rem;
+}
