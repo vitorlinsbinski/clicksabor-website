@@ -70,6 +70,16 @@ section.home .left .buttons {
     }
 }
 
+@media (max-width: 768px) {
+    section.home {
+        padding-top: 2.4rem;
+    }
+
+    section.home .left .buttons {
+        gap: .8rem;
+    }
+}
+
 /* SOBRE */
 section.sobre {
     padding: 12rem 0;
@@ -152,6 +162,10 @@ section.sobre .right ul li h3 {
 }
 
 @media (max-width: 768px) {
+    section.sobre {
+        padding: 3.6rem 0;
+    }
+
     section.sobre .container {
         gap: 2.8rem;
     }
@@ -280,6 +294,10 @@ section.cardapio ul li .bottom a:hover {
 }
 
 @media(max-width: 768px) {
+    section.cardapio {
+        padding: 3.6rem 0;
+    }
+
     section.cardapio .top {
         justify-content: center;
     }
@@ -423,7 +441,11 @@ section.contato .right ul.contacts>li ul li {
 @media (max-width: 768px) {
     section.contato {
         padding-bottom: 2.4rem;
-        padding-top: 4rem;
+        padding-top: 3.6rem;
+    }
+
+    section.contato .container {
+        gap: 2.4rem;
     }
 
     section.contato .right ul.contacts {
