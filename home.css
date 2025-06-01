@@ -21,7 +21,7 @@ section.home .bg {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.05;
+    opacity: 0.06;
 }
 
 section.home .left {
@@ -94,6 +94,11 @@ section.home .left .buttons {
 
     section.home .left .buttons {
         gap: .8rem;
+    }
+
+    section.home .left {
+        width: 100%;
+        max-width: 30rem;
     }
 }
 
