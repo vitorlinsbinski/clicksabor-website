@@ -132,6 +132,7 @@ header {
     top: 0;
     right: 0;
     z-index: 1000;
+    box-shadow: 0 2px 60px rgba(0, 0, 0, 0.05);
 }
 
 header .container {
