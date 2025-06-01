@@ -7,6 +7,23 @@ section.home {
     position: relative;
 }
 
+section.home .container {
+    z-index: 1;
+}
+
+section.home .bg {
+    background-image: url('./assets/food-pattern.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+}
+
 section.home .left {
     width: 100%;
     max-width: 41.7rem;
