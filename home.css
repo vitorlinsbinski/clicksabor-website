@@ -151,6 +151,24 @@ section.sobre .right ul li h3 {
 
 }
 
+@media (max-width: 768px) {
+    section.sobre .container {
+        gap: 2.8rem;
+    }
+
+    section.sobre .left {
+        max-width: 30rem;
+    }
+
+    section.sobre .left h2 {
+        margin-bottom: 1.2rem;
+    }
+
+    section.sobre .right ul {
+        gap: 1.6rem;
+    }
+}
+
 /* CARDÁPIO */
 section.cardapio {
     padding: 6rem 0;
@@ -403,11 +421,24 @@ section.contato .right ul.contacts>li ul li {
 }
 
 @media (max-width: 768px) {
+    section.contato {
+        padding-bottom: 2.4rem;
+        padding-top: 4rem;
+    }
+
     section.contato .right ul.contacts {
-        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section.contato .right .top h2 {
+        margin-bottom: 1.2rem;
     }
 
     section.contato .right ul.contacts>li {
         border: none;
+        width: 100%;
+        max-width: 20rem;
     }
 }
