@@ -158,7 +158,7 @@ section.details .left {
 section.details .left .acompanhamentos h2 {
     width: 100%;
     max-width: 33rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
 }
 
 section.details .left .acompanhamentos ul {
@@ -182,7 +182,7 @@ section.details .left .acompanhamentos ul li:not(:last-child) {
 section.details .left .tamanho-porcao-preco h2 {
     width: 100%;
     max-width: 33rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
 }
 
 section.details .left .tamanho-porcao-preco table {
@@ -222,7 +222,7 @@ section.details .right .preparo {
 }
 
 section.details .right .preparo h2 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
 }
 
 section.details .right .preparo .desc {
@@ -231,8 +231,12 @@ section.details .right .preparo .desc {
     gap: .6rem;
 }
 
+section.details .right .avaliacoes {
+    padding-bottom: 3rem;
+}
+
 section.details .right .avaliacoes h2 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 section.details .right .avaliacoes .stars {
@@ -250,7 +254,7 @@ section.details .right .avaliacoes>.stars span {
 section.details .right .avaliacoes p {
     font-size: 2rem;
     margin-top: 0.2rem;
-    margin-bottom: 4.4rem;
+    margin-bottom: 3.6rem;
 }
 
 section.details .right .avaliacoes .comentarios {
