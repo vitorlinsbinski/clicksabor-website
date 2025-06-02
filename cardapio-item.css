@@ -122,7 +122,10 @@ section.food .img {
 
     section.food .left .actions select {
         max-width: auto;
+        padding: 0 3rem;
+        flex: 1;
     }
+
 }
 
 /* DETALHES */
@@ -161,6 +164,7 @@ section.details .left .acompanhamentos h2 {
 section.details .left .acompanhamentos ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.6rem;
 }
 
