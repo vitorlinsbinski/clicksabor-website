@@ -119,6 +119,10 @@ section.food .img {
     section.food .left {
         margin-bottom: 2.8rem;
     }
+
+    section.food .left .actions select {
+        max-width: auto;
+    }
 }
 
 /* DETALHES */
