@@ -133,7 +133,7 @@ section {
 
 /* HEADER */
 header {
-    width: 100%;
+    width: 100vw;
     height: 9.9rem;
     background-color: var(--white-color);
     display: flex;
