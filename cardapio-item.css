@@ -1,7 +1,7 @@
 /* COMIDA */
 section.food {
     width: 100%;
-    height: 54.8rem;
+    height: auto;
     padding: 5.6rem 0;
     position: relative;
     overflow: hidden;
@@ -80,6 +80,47 @@ section.food .img {
     right: 0;
 }
 
+@media (max-width: 1200px) {
+    section.food {
+        height: auto;
+    }
+
+    section.food .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    section.food .left {
+        margin-bottom: 3.2rem;
+    }
+
+    section.food .img {
+        width: 100%;
+        max-width: 70rem;
+        position: inherit;
+        border-radius: 1.2rem;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    section.food {
+        padding-top: 2.4rem;
+        padding-bottom: 4rem;
+    }
+
+    section.food .left .desc {
+        margin-bottom: 2rem;
+    }
+
+    section.food .left {
+        margin-bottom: 2.8rem;
+    }
+}
+
 /* DETALHES */
 section.details {
     width: 100%;
@@ -98,11 +139,13 @@ section.details .left {
     align-items: flex-start;
     gap: 6rem;
     width: 100%;
+    height: 100%;
     margin-right: 8rem;
     padding-top: 6rem;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    padding-right: 6rem;
+    padding-right: 8rem;
     padding-bottom: 3rem;
+    flex: 1;
 }
 
 section.details .left .acompanhamentos h2 {
@@ -158,11 +201,12 @@ section.details .left .tamanho-porcao-preco table tr:last-child {
 
 section.details .right {
     padding-top: 6rem;
+    padding-bottom: 3rem;
     width: 100%;
+    max-width: 62rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 section.details .right .preparo {
@@ -203,13 +247,14 @@ section.details .right .avaliacoes p {
 
 section.details .right .avaliacoes .comentarios {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.2rem;
 }
 
 section.details .right .avaliacoes .comentarios .comentario {
     width: 100%;
-    height: 18.5rem;
+    height: 20rem;
+    overflow: hidden;
     padding: 2.5rem 1.6rem;
     border-radius: 1.2rem;
     background-color: var(--white-color);
@@ -261,5 +306,25 @@ section.details .right .avaliacoes .comentarios .comentario p {
 
     section.details .left {
         border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    section.details {
+        padding: 3rem 0;
+    }
+
+    section.details .left {
+        padding: 0;
+        gap: 3.2rem;
+    }
+
+    section.details .right {
+        padding: 0;
+        margin-top: 3.2rem;
+    }
+
+    section.details .right .preparo {
+        margin-bottom: 3.2rem;
     }
 }
