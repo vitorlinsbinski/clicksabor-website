@@ -341,7 +341,7 @@ header .cart-btn:hover {
     right: 0;
     z-index: 1000;
     background-color: var(--white-color);
-    padding: 3rem 3rem 1.8rem 3rem;
+    padding: 1.8rem 3rem;
 
     display: flex;
     flex-direction: column;
@@ -393,7 +393,7 @@ header .cart-btn:hover {
 .cart .items .item {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.2rem;
 }
 
@@ -408,8 +408,8 @@ header .cart-btn:hover {
 }
 
 .cart .items .item .img {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 1.2rem;
     overflow: hidden;
 }
@@ -427,8 +427,8 @@ header .cart-btn:hover {
 }
 
 .cart .items .item .info .actions .remove-btn {
-    width: 4rem;
-    height: 4rem;
+    width: 4.8rem;
+    height: 4.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -625,7 +625,18 @@ header .cart-btn:hover {
     }
 
     .cart {
-        padding: 2rem 2rem 1.8rem 2rem;
+        height: 80%;
+        padding: 1.8rem 2rem;
+        width: 100%;
+        transform: translateX(0);
+        transform: translateY(130%);
+        bottom: 0;
+        right: 0;
+        border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+    .cart.active {
+        transform: translateY(25%);
     }
 
     .cart .top {
@@ -640,5 +651,10 @@ header .cart-btn:hover {
     .cart .top .img {
         width: 3rem;
         height: 3rem;
+    }
+
+    .cart .items .item .info h3 {
+        font-size: 2rem;
+        max-width: 18rem;
     }
 }
