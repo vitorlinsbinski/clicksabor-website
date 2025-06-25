@@ -48,7 +48,7 @@ cartCloseBtn.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   const cartSidebar = document.getElementById('cartSidebar');
-  const cartItemsContainer = cartSidebar.querySelector('.items');
+  const cartItemsContainer = cartSidebar.querySelector('#cartItems');
   const cartTotalEl = document.getElementById('total');
   const overlay = document.getElementById('overlay');
 
