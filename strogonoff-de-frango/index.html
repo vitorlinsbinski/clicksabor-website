@@ -16,44 +16,55 @@
 <body>
     <header>
         <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.svg" alt="Logo do Click.Sabor">
+            <div class="left">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.svg" alt="Logo do Click.Sabor">
 
-                <h1>Click.Sabor</h1>
-            </a>
+                    <h1>Click.Sabor</h1>
+                </a>
 
-            <nav id="menu">
-                <ul>
-                    <li class="item-menu"><a href="../index.html">Home</a></li>
-                    <li class="item-menu"><a href="#sobre">Sobre</a></li>
-                    <li>
-                        <a href="#cardapio" id="cardapio-navitem">Cardápio</a>
+            </div>
 
-                        <div class="dropdown" id="dropdown">
-                            <ul>
-                                <li><a href="../feijoada/">Feijoada</a></li>
-                                <li><a href="../strogonoff-de-frango/">Strogonoff de Frango</a></li>
-                                <li><a href="../macarrao-a-bolonhesa/">Macarrão à Bolonhesa</a></li>
-                                <li><a href="../parmegiana-de-frango/">Parmegiana de Frango</a></li>
-                            </ul>
+            <div class="right">
+                <nav id="menu">
+                    <ul class="items-menu">
+                        <li class="item-menu"><a href="../index.html#home">Home</a></li>
+                        <li class="item-menu"><a href="../index.html#sobre">Sobre</a></li>
+                        <li>
+                            <a href="#cardapio" id="cardapio-navitem">Cardápio</a>
+
+                            <div class="dropdown" id="dropdown">
+                                <ul>
+                                    <li><a href="../feijoada/">Feijoada</a></li>
+                                    <li><a href="../strogonoff-de-frango/">Strogonoff de Frango</a></li>
+                                    <li><a href="../macarrao-a-bolonhesa/">Macarrão à Bolonhesa</a></li>
+                                    <li><a href="../parmegiana-de-frango/">Parmegiana de Frango</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item-menu"><a href="../index.html#contato">Contato</a></li>
+
+                        <div class="icon-close" id="closeIcon">
+                            <img src="../assets/icon-close.svg" alt="">
                         </div>
-                    </li>
-                    <li class="item-menu"><a href="#contato">Contato</a></li>
+                    </ul>
 
-                    <div class="icon-close" id="closeIcon">
-                        <img src="../assets/icon-close.svg" alt="">
+                    <div class="overlay" id="overlay"></div>
+
+
+                    <div class="burguer-icon" id="burgerIcon">
+                        <img src="../assets/icon-burger.svg" alt="">
                     </div>
-                </ul>
+                </nav>
 
-                <div class="overlay" id="overlay"></div>
+                <button class="cart-btn" id="cartBtn">
+                    <img src="../assets/icon-basket.svg" alt="">
+                </button>
+            </div>
 
-                <div class="burguer-icon" id="burgerIcon">
-                    <img src="../assets/icon-burger.svg" alt="">
-                </div>
-            </nav>
+
         </div>
     </header>
-
     <section id="food" class="food">
         <div class="container">
             <div class="left">

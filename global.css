@@ -388,7 +388,8 @@ header .cart-btn:hover {
         pointer-events: all;
     }
 
-    header nav ul {
+    header nav>ul {
+        padding: 2rem;
         position: absolute;
         width: 40rem;
         max-width: 70vw;
@@ -414,6 +415,11 @@ header .cart-btn:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+    header nav ul.items-menu>li {
+        font-weight: 600;
     }
 
     header nav ul li:hover .dropdown {
@@ -421,7 +427,7 @@ header .cart-btn:hover {
     }
 
     header nav ul li .dropdown {
-        width: 20rem;
+        width: 100%;
         height: 0;
         position: relative;
         z-index: 201;
@@ -430,16 +436,16 @@ header .cart-btn:hover {
         transform: translateY(0);
         box-shadow: none;
         border-radius: 0;
-        margin-top: 1.4rem;
-        position: absolute;
-        transition: all .3s;
+        margin: 0;
+        padding: 0;
+        transition: all .3s ease;
         opacity: 0;
         pointer-events: none;
     }
 
     header nav ul li .dropdown ul {
         width: 100%;
-        height: 100%;
+        height: auto;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -447,14 +453,24 @@ header .cart-btn:hover {
     }
 
     header nav ul li .dropdown.active {
-        height: 30rem;
+        height: 25rem;
         opacity: 1;
         position: relative;
         pointer-events: all;
+        margin-top: 2.4rem;
+    }
+
+    header nav ul li .dropdown ul li {
+        font-weight: 400;
+    }
+
+    header nav ul li .dropdown ul li a {
+        margin-left: .5rem;
     }
 
     header .right {
         gap: 2rem;
         flex-direction: row-reverse;
     }
+
 }
