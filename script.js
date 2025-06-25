@@ -47,44 +47,50 @@ cartCloseBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const productSection = document.getElementById('food');
-  const addButton = productSection.querySelector('.actions button');
-  const sizeSelect = productSection.querySelector('.actions select');
-  const productNameEl = productSection.querySelector('h1');
-  const productImgEl = productSection.querySelector('.img img');
-
   const cartSidebar = document.getElementById('cartSidebar');
   const cartItemsContainer = cartSidebar.querySelector('.items');
   const cartTotalEl = document.getElementById('total');
+  const overlay = document.getElementById('overlay');
 
   let cart = [];
 
-  function handleAddItem() {
-    const selectedOption = sizeSelect.options[sizeSelect.selectedIndex];
-    const optionText = selectedOption.textContent;
-    const textParts = optionText.split('|');
-    const sizeName = textParts[1].trim();
-    const priceString = textParts[0]
-      .replace('R$', '')
-      .replace('(', '')
-      .replace(')', '')
-      .trim();
-    const price = parseFloat(priceString.replace(',', '.'));
-    const productName = productNameEl.textContent;
-    const productImgSrc = productImgEl.src;
+  const productSection = document.getElementById('food');
 
-    const cartItem = {
-      id: Date.now(),
-      name: productName + ' (' + sizeName + ')',
-      price: price,
-      imgSrc: productImgSrc,
-    };
+  if (productSection) {
+    const addButton = productSection.querySelector('.actions button');
+    const sizeSelect = productSection.querySelector('.actions select');
+    const productNameEl = productSection.querySelector('h1');
+    const productImgEl = productSection.querySelector('.img img');
 
-    cart.push(cartItem);
-    renderCart();
+    addButton.addEventListener('click', handleAddItem);
 
-    overlayItem.classList.add('active');
-    cartSidebar.classList.add('active');
+    function handleAddItem() {
+      const selectedOption = sizeSelect.options[sizeSelect.selectedIndex];
+      const optionText = selectedOption.textContent;
+      const textParts = optionText.split('|');
+      const sizeName = textParts[1].trim();
+      const priceString = textParts[0]
+        .replace('R$', '')
+        .replace('(', '')
+        .replace(')', '')
+        .trim();
+      const price = parseFloat(priceString.replace(',', '.'));
+      const productName = productNameEl.textContent;
+      const productImgSrc = productImgEl.src;
+
+      const cartItem = {
+        id: Date.now(),
+        name: productName + ' (' + sizeName + ')',
+        price: price,
+        imgSrc: productImgSrc,
+      };
+
+      cart.push(cartItem);
+      renderCart();
+
+      overlay.classList.add('active');
+      cartSidebar.classList.add('active');
+    }
   }
 
   function handleRemoveItem(itemId) {
@@ -138,8 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     calculateTotal();
   }
-
-  addButton.addEventListener('click', handleAddItem);
 
   cartItemsContainer.addEventListener('click', function (event) {
     const removeButton = event.target.closest('.remove-btn');
