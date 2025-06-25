@@ -9,9 +9,3 @@ Website link: https://vitorlinsbinski.github.io/clicksabor-website/
 - HTML5
 - CSS3
 - JavaScript
-
-## Demo
-
-See a demonstration of the project below:
-
-![Click Sabor Demo](demo.gif)
