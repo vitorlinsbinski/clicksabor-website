@@ -541,7 +541,7 @@ header .cart-btn:hover {
 
     header nav>ul {
         padding: 2rem;
-        position: absolute;
+        position: fixed;
         width: 40rem;
         max-width: 70vw;
         height: 100vh;
