@@ -136,7 +136,7 @@ section {
 .btn-close {
     position: absolute;
     top: 2rem;
-    right: 2.4rem;
+    right: 2rem;
     cursor: pointer;
     width: 2.8rem;
     height: 2.8rem;
@@ -314,7 +314,8 @@ header .cart-btn:hover {
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -335,7 +336,7 @@ header .cart-btn:hover {
     position: absolute;
     width: 90%;
     max-width: 70rem;
-    height: 100vh;
+    height: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
@@ -355,9 +356,28 @@ header .cart-btn:hover {
     transform: translateX(0);
 }
 
-.cart h2 {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
+.cart .top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.8rem;
+}
+
+.cart .top .img {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart .top .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.cart .top h2 {
+    font-size: 3.4rem;
 }
 
 .cart .items {
@@ -477,17 +497,13 @@ header .cart-btn:hover {
     }
 
     header {
-        height: 7rem;
+        height: 8rem;
+        padding: 1.6rem 0;
     }
 
     header .container {
         align-items: center;
         gap: 1.6rem;
-    }
-
-    header {
-        height: auto;
-        padding: 1.6rem 0;
     }
 
     header .logo img {
@@ -512,7 +528,7 @@ header .cart-btn:hover {
     }
 
     section {
-        scroll-margin-top: 7rem;
+        scroll-margin-top: 8rem;
     }
 
     header nav.active ul {
@@ -608,4 +624,16 @@ header .cart-btn:hover {
         flex-direction: row-reverse;
     }
 
+    .cart {
+        padding: 2rem 2rem 1.8rem 2rem;
+    }
+
+    .cart .top h2 {
+        font-size: 2.8rem;
+    }
+
+    .cart .top .img {
+        width: 3rem;
+        height: 3rem;
+    }
 }
