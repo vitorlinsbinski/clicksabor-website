@@ -46,30 +46,106 @@ cartCloseBtn.addEventListener('click', () => {
   overlayItem.classList.remove('active');
 });
 
-const products = [
-  {
-    id: 1,
-    title: 'Feijoada',
-    description: 'Tradicional prato brasileiro feito com feijão preto',
-    imgPath: './assets/img-feijoada.png',
-  },
+document.addEventListener('DOMContentLoaded', () => {
+  const productSection = document.getElementById('food');
+  const addButton = productSection.querySelector('.actions button');
+  const sizeSelect = productSection.querySelector('.actions select');
+  const productNameEl = productSection.querySelector('h1');
+  const productImgEl = productSection.querySelector('.img img');
 
-  {
-    id: 2,
-    title: 'Feijoada',
-    description: 'Tradicional prato brasileiro feito com feijão preto',
-    imgPath: './assets/img-feijoada.png',
-  },
-  {
-    id: 3,
-    title: 'Feijoada',
-    description: 'Tradicional prato brasileiro feito com feijão preto',
-    imgPath: './assets/img-feijoada.png',
-  },
-  {
-    id: 4,
-    title: 'Feijoada',
-    description: 'Tradicional prato brasileiro feito com feijão preto',
-    imgPath: './assets/img-feijoada.png',
-  },
-];
+  const cartSidebar = document.getElementById('cartSidebar');
+  const cartItemsContainer = cartSidebar.querySelector('.items');
+  const cartTotalEl = document.getElementById('total');
+
+  let cart = [];
+
+  const handleAddItem = () => {
+    const selectedOption = sizeSelect.options[sizeSelect.selectedIndex];
+
+    const textContent = selectedOption.textContent;
+    const priceString = textContent.match(/R\$ ([\d,]+)/)[1];
+    const sizeName = textContent.split('|')[1].trim();
+
+    const price = parseFloat(priceString.replace(',', '.'));
+
+    const productName = productNameEl.textContent;
+    const productImgSrc = productImgEl.src;
+
+    const cartItem = {
+      id: Date.now(),
+      name: `${productName} (${sizeName})`,
+      price: price,
+      imgSrc: productImgSrc,
+    };
+
+    cart.push(cartItem);
+
+    renderCart();
+
+    overlayItem.classList.add('active');
+    cartSidebar.classList.add('active');
+  };
+
+  const handleRemoveItem = (itemId) => {
+    cart = cart.filter((item) => item.id !== itemId);
+
+    renderCart();
+  };
+
+  const calculateTotal = () => {
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+    cartTotalEl.textContent = total.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    });
+  };
+
+  const renderCart = () => {
+    cartItemsContainer.innerHTML = '';
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML =
+        '<p class="empty-cart">Seu carrinho está vazio.</p>';
+    } else {
+      cart.forEach((item) => {
+        const itemHtml = `
+                    <div class="item">
+                        <div class="img">
+                            <img src="${item.imgSrc}" alt="${item.name}">
+                        </div>
+                        <div class="info">
+                            <div class="left">
+                                <h3 id="product-name">${item.name}</h3>
+                                <span id="product-price">${item.price.toLocaleString(
+                                  'pt-BR',
+                                  { style: 'currency', currency: 'BRL' }
+                                )}</span>
+                            </div>
+                            <div class="actions">
+                                <button class="remove-btn" data-id="${item.id}">
+                                    <img src="../assets/icon-trash.svg" alt="Remover item">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        cartItemsContainer.innerHTML += itemHtml;
+      });
+    }
+
+    calculateTotal();
+  };
+
+  addButton.addEventListener('click', handleAddItem);
+
+  cartItemsContainer.addEventListener('click', (event) => {
+    const removeButton = event.target.closest('.remove-btn');
+    if (removeButton) {
+      const itemIdToRemove = parseInt(removeButton.dataset.id, 10);
+      handleRemoveItem(itemIdToRemove);
+    }
+  });
+
+  renderCart();
+});
