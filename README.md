@@ -9,6 +9,7 @@ Website link: https://vitorlinsbinski.github.io/clicksabor-website/
 - HTML5
 - CSS3
 - JavaScript
+- Figma (for UI/UX design made entirely by me)
 
 ## Demonstration
 
