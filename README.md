@@ -1,18 +1,39 @@
-# Click Sabor
+# 🍽️ Click Sabor
 
-Click Sabor is a web application designed to showcase a modern and responsive restaurant website. The project demonstrates the use of contemporary web technologies to create an engaging user experience for browsing menus, placing orders, and exploring restaurant features.
+**Click Sabor** is a modern web application that brings out the best of a digital restaurant! Browse menus, place orders, and discover amazing features in an engaging, responsive experience.
 
-Website link: https://vitorlinsbinski.github.io/clicksabor-website/
+🌐 **Try it now:** [Click Sabor Website](https://vitorlinsbinski.github.io/clicksabor-website/)
 
-## Technologies Used
+---
 
-- HTML5
-- CSS3
-- JavaScript
-- Figma (for UI/UX design made entirely by me)
+## 🚀 Key Features
 
-## Demonstration
+- **Intuitive navigation** for all types of customers
+- **Fast and easy online ordering**
+- **Modern design** with an attractive look
+- **Fully responsive:** perfect on any device
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5**
+- **CSS3** (with advanced responsive techniques)
+- **JavaScript**
+- **Figma** (UI/UX designed from scratch)
+
+---
+
+## 📸 Demo
+
+<div align="center">
 
 ![Screenshot 1](screenshots/screenshot.png)
 ![Screenshot 2](screenshots/screenshot2.png)
 ![Screenshot 3](screenshots/screenshot3.png)
+
+</div>
+
+---
+
+Feel free to explore, contribute, or share your suggestions! 🚀
