@@ -1,6 +1,6 @@
 # 🍽️ Click Sabor
 
-**Click Sabor** is a modern web application that brings out the best of a digital restaurant! Browse menus, place orders, and discover amazing features in an engaging, responsive experience.
+**Click Sabor** is a modern, responsive landing page designed for digital restaurants. Explore menus, place orders, and enjoy a seamless user experience—all in one attractive interface.
 
 🌐 **Try it now:** [Click Sabor Website](https://vitorlinsbinski.github.io/clicksabor-website/)
 
