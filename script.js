@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="actions">
                 <button class="remove-btn" data-id="${item.id}">
-                <img src="../assets/icon-trash.svg" alt="Remover item">
+                <img src="/assets/icon-trash.svg" alt="Remover item">
                 </button>
             </div>
             </div>
