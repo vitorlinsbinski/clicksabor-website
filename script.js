@@ -1,7 +1,7 @@
 const navItem = document.getElementById('menu');
 const burgerIconItem = document.getElementById('burgerIcon');
 const btnCloseMenu = document.getElementById('btnCloseMenu');
-const cardapioNavItem = document.getElementById('cardapio-navitem');
+const cardapioNavItem = document.getElementById('nav-cardapio');
 const dropdownItem = document.getElementById('dropdown');
 const itensMenu = document.getElementsByClassName('item-menu');
 const overlayItem = document.getElementById('overlay');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const cartTotalEl = document.getElementById('total');
   const overlay = document.getElementById('overlay');
 
-  let cart = [];
+  let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
 
   const productSection = document.getElementById('food');
 
@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       cart.push(cartItem);
+      localStorage.setItem('cartItems', JSON.stringify(cart));
       renderCart();
 
       overlay.classList.add('active');
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     cart = newCart;
+    localStorage.setItem('cartItems', JSON.stringify(cart));
     renderCart();
   }
 
@@ -155,3 +157,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   renderCart();
 });
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute('id');
+      const navItem = document.getElementById(`nav-${id}`);
+
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navItem.classList.add('active');
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+sections.forEach((section) => observer.observe(section));
