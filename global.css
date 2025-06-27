@@ -451,7 +451,7 @@ header .cart-btn:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
+    padding-top: 2.8rem;
 }
 
 .cart .total h3 {
@@ -647,7 +647,7 @@ header .cart-btn:hover {
 
     .cart .top {
         gap: .8rem;
-        margin-bottom: 2.8rem;
+        margin-bottom: 2rem;
     }
 
     .cart .top h2 {
