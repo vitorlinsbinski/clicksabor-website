@@ -1,7 +1,7 @@
-const navItem = document.getElementById('menu');
+const navbar = document.getElementById('menu');
 const burgerIconItem = document.getElementById('burgerIcon');
 const btnCloseMenu = document.getElementById('btnCloseMenu');
-const cardapioNavItem = document.getElementById('nav-cardapio');
+const cardapioNavItem = document.getElementById('cardapio-navitem');
 const dropdownItem = document.getElementById('dropdown');
 const itensMenu = document.getElementsByClassName('item-menu');
 const overlayItem = document.getElementById('overlay');
@@ -10,17 +10,17 @@ const cartCloseBtn = document.getElementById('btnCloseCart');
 const cartSidebar = document.getElementById('cartSidebar');
 
 burgerIconItem.addEventListener('click', () => {
-  navItem.classList.toggle('active');
+  navbar.classList.toggle('active');
   overlayItem.classList.add('active');
 });
 
 btnCloseMenu.addEventListener('click', () => {
-  navItem.classList.toggle('active');
+  navbar.classList.toggle('active');
   overlayItem.classList.remove('active');
 });
 
 overlayItem.addEventListener('click', () => {
-  navItem.classList.remove('active');
+  navbar.classList.remove('active');
   overlayItem.classList.remove('active');
   cartSidebar.classList.remove('active');
 });
@@ -169,7 +169,10 @@ const observer = new IntersectionObserver(
 
       if (entry.isIntersecting) {
         navLinks.forEach((link) => link.classList.remove('active'));
-        navItem.classList.add('active');
+
+        if (navItem) {
+          navItem.classList.add('active');
+        }
       }
     });
   },
